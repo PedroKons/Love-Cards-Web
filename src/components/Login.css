@@ -1,0 +1,18 @@
+.main-login {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.login-button {
+    padding: .5rem;
+    width: 100px;
+    border-radius: 12px;
+    border: none;
+    background-color: #dd1d1d;
+    color: white;
+    font-weight: bold;
+}

@@ -32,6 +32,19 @@ const Drawer = () => {
                 Como Jogar
               </Link>
             </li>
+            <li>
+              <br />
+              <p className="other-products">Outros Produtos</p>
+            </li>
+            <li>
+              <a href="https://lovechocolate.com.br/products/love-chocolate?utm_campaign=internal_referral&utm_source=lovecards_digital" target="_blank" rel="noopener noreferrer">Love Chocolate</a>
+            </li>
+            <li>
+              <a href="https://lovechocolate.com.br/products/seu-site-personalizado?utm_campaign=internal_referral&utm_source=lovecards_digital" target="_blank" rel="noopener noreferrer">Love Site</a>
+            </li>
+            <li>
+              <a href="https://lovechocolate.com.br/products/love-cards?utm_campaign=internal_referral&utm_source=lovecards_digital" target="_blank" rel="noopener noreferrer">Love Cards Físico</a>
+            </li>
           </ul>
         </nav>
       </div>
