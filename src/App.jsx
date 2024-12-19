@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import ComoJogar from "./pages/ComoJogar"; // Importa a pagina de Como Jogar.
 import PopUp from './components/PopUp'; // Importa o componente de PopUp.
 import EmailPopUp from "./components/EmailPopUp";
-import Login from "./components/login";
+import Login from "./components/Login";
 import Cookies from 'js-cookie';
 import CodePopUp from "./components/CodePopUp";
 
