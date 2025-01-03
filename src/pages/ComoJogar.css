@@ -1,0 +1,25 @@
+.container-como-jogar {
+    padding: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sub-title-como-jogar {
+    text-align: center;
+}
+
+.card-page {
+    border-radius: 12px;
+    padding-top: 2rem;
+    width: 90%;
+}
+
+@media (min-width: 1024px) {
+    .card-page {
+        width: 20%;
+    }
+}
