@@ -19,6 +19,15 @@
     text-decoration: none;
 }
 
+.container-extra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;   
+}
+
 .card {
     transition: transform 0.5s ease, opacity 0.5s ease;
     border-radius: 10px;
@@ -76,6 +85,9 @@
 @media screen and (min-width: 1024px) {
     .logo-svg {
         width: 10%;
+    }
+    .container-buttons {
+        width: 15%;
     }
 
 }
