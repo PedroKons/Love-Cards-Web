@@ -494,7 +494,7 @@ const App = () => {
                       <img src={revealedCard.cardLink} alt="Card Premium" className="premium-card" />
                     </div>
                   )}
-                  <div className="container-buttons">
+                  <div className="container-extra">
                     <button
                       onClick={() => {
                         if (isVerified) {
