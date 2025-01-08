@@ -6,11 +6,19 @@
     justify-items: center;
     flex-direction: column;
     overflow: hidden;
+    padding-top: 6rem;
+    height: 100vh;
 }
 
+.h1-text {
+    text-align: center;
+    font-size: 22px;
+}
 .sub-title-como-jogar {
     text-align: center;
+    padding-top: .5rem;
 }
+
 
 .card-page {
     border-radius: 12px;
