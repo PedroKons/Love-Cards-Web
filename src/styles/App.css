@@ -35,10 +35,10 @@
     height: auto;
 }
     
-/* .card-out {
+.card-out {
     transform: translateY(-100px) rotateZ(20deg);
     opacity: 0;
-} */
+}
 
 .title-close {
     color: white;
