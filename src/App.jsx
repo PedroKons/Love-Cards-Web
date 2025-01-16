@@ -291,7 +291,7 @@ const App = () => {
   useEffect(() => {
     if (Cookies.get('isLoggedIn') === 'true') {
       setIsVerified(true);
-      // setCurrentDeck(shuffle(deckPaid));
+      setCurrentDeck(shuffle(deckPaid));
     }
 
     const savedEmail = Cookies.get('userEmail');
@@ -415,7 +415,7 @@ const App = () => {
           setShowCodePopUp(false);
         }, 1000);
         setShowCodePopUp(false);
-        // setCurrentDeck(shuffle(deckPaid));
+        setCurrentDeck(shuffle(deckPaid));
         setCurrentQuestion(0);
         location.reload();
       } else {
