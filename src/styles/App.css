@@ -60,7 +60,7 @@
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-    padding-top: 10rem;
+    padding-top: 12rem;
 }
 
 .container-logo {
@@ -98,6 +98,5 @@
     }
     .container-app {
         /* padding-top: 6rem; */
-        margin-bottom: 5rem;
     }
 }
