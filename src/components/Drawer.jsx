@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "./Drawer.css";
+import Login from "./Login"
 
-const Drawer = () => {
+const Drawer = ({isVerified, handleShowCpfPopup, handleLogout}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -44,6 +46,23 @@ const Drawer = () => {
             </li>
             <li>
               <a href="https://lovechocolate.com.br/products/love-cards?utm_campaign=internal_referral&utm_source=lovecards_digital" target="_blank" rel="noopener noreferrer">Love Cards Físico</a>
+            </li>
+            <li>
+                {!isVerified && (
+                <Login
+                  clickLogin={() => {
+                    handleShowCpfPopup()
+                    toggleDrawer()
+                  }}
+                  text={"Entrar"}
+                />
+              )}
+              {isVerified && (
+                <Login
+                  clickLogin={handleLogout}
+                  text={"Sair"}
+                />
+              )}
             </li>
           </ul>
         </nav>

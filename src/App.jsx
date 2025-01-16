@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import ComoJogar from "./pages/ComoJogar"; // Importa a pagina de Como Jogar.
 import PopUp from './components/PopUp'; // Importa o componente de PopUp.
 import EmailPopUp from "./components/EmailPopUp";
-import Login from "./components/Login";
 import Cookies from 'js-cookie';
 import CodePopUp from "./components/CodePopUp";
 
@@ -417,7 +416,7 @@ const App = () => {
         setShowCodePopUp(false);
         setCurrentDeck(shuffle(deckPaid));
         setCurrentQuestion(0);
-        location.reload();
+        // location.reload();
       } else {
         const errorData = await response.json();
         alert(errorData.detail || 'Código inválido ou expirado.');
@@ -446,25 +445,13 @@ const App = () => {
 
   return (
     <Router>
-      <Drawer />
+      <Drawer isVerified = {isVerified} handleShowCpfPopup = {handleShowCpfPopup} handleLogout = {handleLogout}/>
       <div className="container-logo">
         <img
           src="https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Icones_Canva.svg?v=1731609916"
           alt="logo"
           className="logo-svg"
         />
-        {!isVerified && (
-          <Login
-            clickLogin={handleShowCpfPopup}
-            text={"Entrar"}
-          />
-        )}
-        {isVerified && (
-          <Login
-            clickLogin={handleLogout}
-            text={"Sair"}
-          />
-        )}
       </div>
       <Routes>
         <Route
