@@ -1,9 +1,9 @@
 .main-login {
-    position: fixed;
+    position: relative;
     top: 20px;
     right: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: end;
 }
 

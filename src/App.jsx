@@ -447,13 +447,7 @@ const App = () => {
   return (
     <Router>
       <Drawer />
-      <div className="container-logo">
-        <img
-          src="https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Icones_Canva.svg?v=1731609916"
-          alt="logo"
-          className="logo-svg"
-        />
-        {!isVerified && (
+      {!isVerified && (
           <Login
             clickLogin={handleShowCpfPopup}
             text={"Entrar"}
@@ -465,6 +459,12 @@ const App = () => {
             text={"Sair"}
           />
         )}
+      <div className="container-logo">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Icones_Canva.svg?v=1731609916"
+          alt="logo"
+          className="logo-svg"
+        />
       </div>
       <Routes>
         <Route
