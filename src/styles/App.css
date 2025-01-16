@@ -61,7 +61,6 @@
     width: 100%;
     gap: 1rem;
     padding-top: 10rem;
-    height: 90vh;
 }
 
 .container-logo {
@@ -71,7 +70,6 @@
     justify-content: center;
     padding: 1rem;
     position: absolute;
-    height: 10vh;
 }
 
 .logo-svg {
@@ -99,6 +97,6 @@
         margin-top: 2rem;
     }
     .container-app {
-        padding-top: 6rem;
+        /* padding-top: 6rem; */
     }
 }
