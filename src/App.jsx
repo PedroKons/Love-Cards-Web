@@ -291,7 +291,7 @@ const App = () => {
   useEffect(() => {
     if (Cookies.get('isLoggedIn') === 'true') {
       setIsVerified(true);
-      setCurrentDeck(shuffle(deckPaid));
+      // setCurrentDeck(shuffle(deckPaid));
     }
 
     const savedEmail = Cookies.get('userEmail');
