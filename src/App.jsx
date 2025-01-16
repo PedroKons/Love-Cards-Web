@@ -417,7 +417,7 @@ const App = () => {
         setShowCodePopUp(false);
         setCurrentDeck(shuffle(deckPaid));
         setCurrentQuestion(0);
-        location.reload();
+        // location.reload();
       } else {
         const errorData = await response.json();
         alert(errorData.detail || 'Código inválido ou expirado.');
