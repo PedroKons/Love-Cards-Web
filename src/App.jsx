@@ -307,10 +307,21 @@ const App = () => {
   const [showCodePopUp, setShowCodePopUp] = useState(false);
   const [messageResponseCpf, setMessageResponseCpf] = useState('');
 
+  function getQueryParam(param) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(param);
+  }
+
   useEffect(() => {
     if (Cookies.get('isLoggedIn') === 'true') {
       setIsVerified(true);
       setCurrentDeck(shuffle(deckPaid));
+    }
+    
+    const userEmail = getQueryParam("userEmail");
+    console.log(userEmail);
+    if (userEmail) {
+      Cookies.set('userEmail', userEmail, { expires: 30 });
     }
 
     const savedEmail = Cookies.get('userEmail');
