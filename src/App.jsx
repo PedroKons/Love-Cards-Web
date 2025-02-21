@@ -319,7 +319,6 @@ const App = () => {
     }
     
     const userEmail = getQueryParam("userEmail");
-    console.log(userEmail);
     if (userEmail) {
       Cookies.set('userEmail', userEmail, { expires: 30 });
     }
