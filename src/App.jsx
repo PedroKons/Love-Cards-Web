@@ -63,7 +63,27 @@ const deckFree = [
   {
     id: 5,
     svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_144.svg?v=1734462157",
-  }
+  },
+  {
+    id: 6,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_182.svg?v=1734462157"
+  },
+  {
+    id: 7,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_175.svg?v=1734462157"
+  },
+  {
+    id: 8,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_171.svg?v=1734462157"
+  },
+  {
+    id: 9,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_176.svg?v=1734462158"
+  },
+  {
+    id: 10,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_169.svg?v=1734462157"
+  },
 ];
 
 const deckPaid = [
@@ -314,11 +334,11 @@ const App = () => {
   const handleNext = () => {
     setIsAnimating(true);
     setTimeout(() => {
-      if (!emailCookie && !isVerified && !emailSent && (currentQuestion + 1) % 2 === 0) {
+      if (!emailCookie && !isVerified && !emailSent && (currentQuestion + 1) % 5 === 0) {
         setShowEmailPopup(true);
       }
       // Se o pagamento foi verificado, pula o if das 5 cartas
-      if (!isVerified && (currentQuestion + 1) % 5 === 0) {
+      if (!isVerified && (currentQuestion + 1) % 10 === 0) {
         setShowCpfPopup(true); // Mostra o pop-up apenas se o pagamento não foi verificado
       } else {
         if (currentQuestion < currentDeck.length - 1) {
