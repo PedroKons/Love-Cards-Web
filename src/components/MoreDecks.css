@@ -1,0 +1,174 @@
+/* Main container */
+.template-selector {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Header section */
+  .template-header {
+    margin-bottom: 24px;
+  }
+  
+  .template-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+  .template-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .template-step {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .template-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  /* Template options */
+  .template-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .template-option {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .template-option:hover {
+    border-color: #d1d5db;
+  }
+  
+  .template-option.selected {
+    border-width: 1px;
+  }
+  
+  .template-option.selected.pink {
+    background-color: #dd1d1d2e;
+    border-color: #dd1d1d2f;
+  }
+    
+  .template-option-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  /* Radio button */
+  .radio-container {
+    margin-top: 4px;
+  }
+  
+  .radio-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .radio-button.checked {
+    border: 8px solid #dd1d1d;
+  }
+  
+  /* Template details */
+  .template-details {
+    flex: 1;
+  }
+  
+  .template-name-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon-container {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-container.pink {
+    background-color: #fce7f3;
+  }
+  
+  .icon-container.pink .icon {
+    color: #db2777;
+  }
+  
+  .icon-container.blue {
+    background-color: #dbeafe;
+  }
+  
+  .icon-container.blue .icon {
+    color: #2563eb;
+  }
+  
+  .icon-container.green {
+    background-color: #d1fae5;
+  }
+  
+  .icon-container.green .icon {
+    color: #059669;
+  }
+  
+  .template-name {
+    font-weight: 500;
+  }
+  
+  .template-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 4px 0 0 40px;
+  }
+  
+  /* Action buttons */
+  .template-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .disabled {
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.6;
+}
+
+.template-buy {
+  color: #dd1d1d;
+  text-decoration: underline;
+  font-weight: bold;
+}
+  
+
+  
+
+  
+  

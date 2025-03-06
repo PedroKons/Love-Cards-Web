@@ -17,7 +17,8 @@
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #0d0664;
+    /* background-color: #0d0664; */
+    background-color: rgba(0, 0, 0, 0.897);
     color: #fff;
     transition: left 0.3s ease;
     z-index: 1002;

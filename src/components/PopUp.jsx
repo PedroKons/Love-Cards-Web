@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import './PopUp.css';
 
-const PopUp = ({ cpf, setCpf, onVerify, onClose, isVerified, isLoading }) => {
+const PopUp = ({ cpf, setCpf, onVerify, onClose, isVerified, isLoading, checkoutLinkCurrent }) => {
   return (
     <div className="popup">
       <div className="popup-content">
@@ -15,7 +15,7 @@ const PopUp = ({ cpf, setCpf, onVerify, onClose, isVerified, isLoading }) => {
         <p className='text-complementary'>🔓 Liberte todo o potencial do jogo!</p>
         <p className='text-complementary'>👉 Compre agora ou faça login com o CPF da compra.</p>
         <br />
-        <a className="buttons-game button-pop-up-validation" href='https://seguro.lovechocolate.com.br/r/BAUKPJCJU1'>
+        <a className="buttons-game button-pop-up-validation" href={`https://seguro.lovechocolate.com.br/r/${checkoutLinkCurrent}`}>
             Comprar
         </a>
         <p className='label-input'>Faça login com CPF usado na compra:</p>

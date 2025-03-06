@@ -9,6 +9,8 @@ import PopUp from './components/PopUp'; // Importa o componente de PopUp.
 import EmailPopUp from "./components/EmailPopUp";
 import Cookies from 'js-cookie';
 import CodePopUp from "./components/CodePopUp";
+import MoreDecks from "./components/MoreDecks";
+import TapGame from "./components/TapGame";
 
 // Array com as perguntas/cartas Premium.
 const cardsPremium = [
@@ -289,6 +291,369 @@ const deckPaid = [
 
 ];
 
+const deckPaidQuestion = [
+  {
+    id: 1,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_94Cards_Q_A.svg?v=1741279113"
+  },
+  {
+    id: 2,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_95Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 3,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_96Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 4,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_97Cards_Q_A.svg?v=1741279112"
+  },  
+  {
+    id: 5,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_98Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 6,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_99Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 7,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_100Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 8,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_101Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 9,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_102Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 10,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_103Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 11,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_104Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 12,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_105Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 13,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_106Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 14,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_107Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 15,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_108Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 16,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_109Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 17,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_110Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 18,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_111Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 19,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_112Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 20,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_113Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 21,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_114Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 22,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_115Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 23,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_116Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 24,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_117Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 25,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_118Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 26,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_119Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 27,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_120Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 28,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_121Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 29,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_122Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 30,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_123Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 31,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_124Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 32,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_125Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 33,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_126Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 34,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_127Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 35,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_128Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 36,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_129Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 37,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_130Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 38,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_131Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 39,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_132Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 40,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_133Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 41,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_134Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 42,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_135Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 43,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_136Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 44,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_137Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 45,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_138Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 46,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_139Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 47,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_140Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 48,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_141Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 49,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_142Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 50,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_143Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 51,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_144Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 52,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_145Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 53,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_146Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 54,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_147Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 55,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_148Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 56,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_149Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 57,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_150Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 58,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_151Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 59,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_152Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 60,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_153Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 61,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_154Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 62,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_155Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 63,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_156Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 64,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_157Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 65,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_158Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 66,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_159Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 67,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_160Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 68,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_161Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 69,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_162Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 70,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_163Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 71,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_164Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 72,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_165Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 73,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_166Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 74,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_167Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 75,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_168Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 76,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_169Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 77,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_170Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 78,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_171Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 79,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_172Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 80,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_173Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 81,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_174Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 82,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_175Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 83,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_176Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 84,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_177Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 85,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_178Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 86,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_179Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 87,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_180Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 88,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_181Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 89,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_182Cards_Q_A.svg?v=1741279112"
+  },
+  {
+    id: 90,
+    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_183Cards_Q_A.svg?v=1741279112"
+  }
+]
+
 const App = () => {
   // Estados para controlar o fluxo e a interação do jogo.
   const [currentDeck, setCurrentDeck] = useState(shuffle(deckFree));
@@ -306,6 +671,11 @@ const App = () => {
   const [emailCookie, setEmailCookie] = useState(false);
   const [showCodePopUp, setShowCodePopUp] = useState(false);
   const [messageResponseCpf, setMessageResponseCpf] = useState('');
+  const [showMoreDecks, setShowMoreDecks] = useState(false);
+  const [showTapToPlay, setShowTapToPlay] = useState(true);
+  const [currentDeckType, setCurrentDeckType] = useState("free");
+  const [checkoutLink, setCheckoutLink] = useState('');
+  
 
   function getQueryParam(param) {
     const params = new URLSearchParams(window.location.search);
@@ -332,9 +702,12 @@ const App = () => {
 
   // Função para logout
   const handleLogout = () => {
-    Cookies.remove('isLoggedIn'); // Remove o cookie
+    Cookies.remove('isLoggedIn'); 
+    Cookies.remove('love-cards0');
+    Cookies.remove('love-cards1');
     setIsVerified(false);
     setCurrentDeck(shuffle(deckFree));
+    setCurrentDeckType('free');
   };
 
   // Embaralha os Arrays.
@@ -342,12 +715,13 @@ const App = () => {
 
   // Função que avança para próxima carta.
   const handleNext = () => {
+    setShowTapToPlay(false);
     setIsAnimating(true);
     setTimeout(() => {
       if (!emailCookie && !isVerified && !emailSent && (currentQuestion + 1) % 5 === 0) {
         setShowEmailPopup(true);
       }
-      // Se o pagamento foi verificado, pula o if das 5 cartas
+      // Se o pagamento foi verificado, pula o if das 10 cartas
       if (!isVerified && (currentQuestion + 1) % 10 === 0) {
         setShowCpfPopup(true); // Mostra o pop-up apenas se o pagamento não foi verificado
       } else {
@@ -438,15 +812,26 @@ const App = () => {
       });
   
       if (response.ok) {
+        const data = await response.json();
+        for (let i = 0; i < data.products.length; i++) {
+          if (data.products.length === 0) {
+            return
+          } else {
+            const product = data.products[i];
+            Cookies.set(`love-cards${i}`, product, { expires: 1 });
+          }
+        }
+        
         Cookies.set('isLoggedIn', 'true', { expires: 1 });
         setIsVerified(true);
         setTimeout(() => {
           setShowCodePopUp(false);
         }, 1000);
         setShowCodePopUp(false);
-        setCurrentDeck(shuffle(deckPaid));
+        setTimeout(() => {
+          setShowMoreDecks(true);
+        }, 1000);
         setCurrentQuestion(0);
-        // location.reload();
       } else {
         const errorData = await response.json();
         alert(errorData.detail || 'Código inválido ou expirado.');
@@ -467,7 +852,35 @@ const App = () => {
   };
 
   const handleResetGame = () => {
-    setCurrentDeck(isVerified ? shuffle(deckPaid) : shuffle(deckFree));
+    setCurrentDeck(isVerified ? currentDeck : shuffle(deckFree));
+    setCurrentQuestion(0);
+    setIsGameOver(false);
+    setRevealedCard(null);
+  };
+
+  const handleSelectDeck = (deckType) => {
+    setCurrentDeckType(deckType);
+    switch (deckType) {
+      case "free":
+        setCurrentDeck(shuffle(deckFree));
+        break;
+      case "classic":
+        if (isVerified) {
+          setCurrentDeck(shuffle(deckPaid));
+        } else {
+          setShowCpfPopup(true);
+          return;
+        }
+        break;
+      case "question":
+        if (isVerified) {
+          setCurrentDeck(shuffle(deckPaidQuestion));
+        } else {
+          setShowCpfPopup(true);
+          return;
+        }
+        break;
+    }
     setCurrentQuestion(0);
     setIsGameOver(false);
     setRevealedCard(null);
@@ -476,12 +889,15 @@ const App = () => {
   return (
     <Router>
       <Drawer isVerified = {isVerified} handleShowCpfPopup = {handleShowCpfPopup} handleLogout = {handleLogout}/>
-      <div className="container-logo">
+      <div className="container-logo" onClick={() => setShowMoreDecks(true)}>
         <img
           src="https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Icones_Canva.svg?v=1731609916"
           alt="logo"
           className="logo-svg"
         />
+      </div>
+      <div className="container-more-decks" onClick={() => setShowMoreDecks(true)}>
+        <img src="https://cdn.shopify.com/s/files/1/0777/8245/0483/files/VideoFy_099e234a-f784-4a22-b9df-cd1974d04447.svg?v=1741285248" alt="more-decks" width={80} height={80}/>
       </div>
       <Routes>
         <Route
@@ -496,13 +912,14 @@ const App = () => {
                     isAnimating={isAnimating}
                   />
                   <div className="container-buttons">
-                    <button onClick={handleNext} className="buttons-game">
+                    <button onClick={handleNext} className="buttons-game" style={{display: 'none'}}>
                       Próximo
                     </button>
-                    <button onClick={() => setIsGameOver(true)} className="buttons-game">
+                    <button onClick={() => setIsGameOver(true)} className="buttons-game" style={{width: '40%'}}>
                       Finalizar
                     </button>
                   </div>
+                  {showTapToPlay && <TapGame onTap={handleNext} />}
                 </>
               ) : (
                 <div>
@@ -522,10 +939,11 @@ const App = () => {
                         }
                       }}
                       className="buttons-game"
+                      style={{width: '70%'}}
                     >
                       Revelar Card Premium
                     </button>
-                    <button onClick={handleResetGame} className="buttons-game">
+                    <button onClick={handleResetGame} className="buttons-game" style={{width: '70%'}}>
                       Reiniciar Jogo
                     </button>
                   </div>
@@ -537,6 +955,16 @@ const App = () => {
         <Route path="/como-jogar" element={<ComoJogar />} />
       </Routes>
 
+      {showMoreDecks && (
+        <MoreDecks 
+          onClose={() => setShowMoreDecks(false)} 
+          onSelectDeck={handleSelectDeck}
+          currentDeckType={currentDeckType}
+          setShowCpfPopup={setShowCpfPopup}
+          setCheckoutLink={setCheckoutLink}
+        />
+      )}
+
       {showCpfPopup && (
         <PopUp
           cpf={cpf}
@@ -544,7 +972,8 @@ const App = () => {
           onVerify={handleCpfVerification}
           onClose={() => setShowCpfPopup(false)}
           isVerified={isVerified}
-          isLoading = {isLoading}
+          isLoading={isLoading}
+          checkoutLinkCurrent={checkoutLink}
         />
       )}
 
