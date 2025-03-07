@@ -674,7 +674,7 @@ const App = () => {
   const [showMoreDecks, setShowMoreDecks] = useState(false);
   const [showTapToPlay, setShowTapToPlay] = useState(true);
   const [currentDeckType, setCurrentDeckType] = useState("free");
-  const [checkoutLink, setCheckoutLink] = useState('');
+  const [checkoutLink, setCheckoutLink] = useState('BAUKPJCJU1');
   
 
   function getQueryParam(param) {
