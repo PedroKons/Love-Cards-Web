@@ -2,15 +2,13 @@
     padding: 3rem;
     color: white;
     display: flex;
-    align-items: center;
     justify-items: center;
     flex-direction: column;
-    overflow: hidden;
     padding-top: 6rem;
-    height: 100vh;
+    overflow: auto;
 }
 
-.h1-text {
+.title-como-jogar {
     text-align: center;
     font-size: 22px;
 }
@@ -19,15 +17,31 @@
     padding-top: .5rem;
 }
 
+.span-como-jogar {
+    color: #dd1d1d
+}
 
-.card-page {
-    border-radius: 12px;
-    padding-top: 2rem;
-    width: 90%;
+.game-como-jogar {
+    padding-top: 4rem;
+    font-size: 14px;
+}
+
+.h3-title-como-jogar {
+    padding-bottom: 1rem;
+    font-size: 18px;
+}
+
+.ol-como-jogar {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.a-como-jogar {
+    color: #dd1d1d;
 }
 
 @media (min-width: 1024px) {
-    .card-page {
-        width: 20%;
-    }
+
 }

@@ -11,8 +11,7 @@ body {
     /* background-color: #c7c8ca; */
     background-image: url("https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Fundo_Love_Cards.png?v=1741285158");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
-    overflow: hidden;
-    height: 100vh; 
+    height: 100vh;
 }

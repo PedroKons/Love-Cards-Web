@@ -73,19 +73,7 @@ const deckFree = [
   {
     id: 7,
     svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_175.svg?v=1734462157"
-  },
-  {
-    id: 8,
-    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_171.svg?v=1734462157"
-  },
-  {
-    id: 9,
-    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_176.svg?v=1734462158"
-  },
-  {
-    id: 10,
-    svgOption1: "https://cdn.shopify.com/s/files/1/0777/8245/0483/files/Asset_169.svg?v=1734462157"
-  },
+  }
 ];
 
 const deckPaid = [
@@ -685,7 +673,21 @@ const App = () => {
   useEffect(() => {
     if (Cookies.get('isLoggedIn') === 'true') {
       setIsVerified(true);
-      setCurrentDeck(shuffle(deckPaid));
+      // Recupera o tipo de deck salvo no cookie, ou usa 'classic' como padrão
+      const savedDeckType = Cookies.get('currentDeckType') || 'free';
+      setCurrentDeckType(savedDeckType);
+      
+      // Define o deck correto baseado no tipo salvo
+      switch (savedDeckType) {
+        case 'classic':
+          setCurrentDeck(shuffle(deckPaid));
+          break;
+        case 'question':
+          setCurrentDeck(shuffle(deckPaidQuestion));
+          break;
+        default:
+          setCurrentDeck(shuffle(deckFree));
+      }
     }
     
     const userEmail = getQueryParam("userEmail");
@@ -705,6 +707,7 @@ const App = () => {
     Cookies.remove('isLoggedIn'); 
     Cookies.remove('love-cards0');
     Cookies.remove('love-cards1');
+    Cookies.remove('currentDeckType');
     setIsVerified(false);
     setCurrentDeck(shuffle(deckFree));
     setCurrentDeckType('free');
@@ -718,11 +721,11 @@ const App = () => {
     setShowTapToPlay(false);
     setIsAnimating(true);
     setTimeout(() => {
-      if (!emailCookie && !isVerified && !emailSent && (currentQuestion + 1) % 5 === 0) {
+      if (!emailCookie && !isVerified && !emailSent && (currentQuestion + 1) % 4 === 0) {
         setShowEmailPopup(true);
       }
       // Se o pagamento foi verificado, pula o if das 10 cartas
-      if (!isVerified && (currentQuestion + 1) % 10 === 0) {
+      if (!isVerified && (currentQuestion + 1) % 7 === 0) {
         setShowCpfPopup(true); // Mostra o pop-up apenas se o pagamento não foi verificado
       } else {
         if (currentQuestion < currentDeck.length - 1) {
@@ -832,6 +835,15 @@ const App = () => {
           setShowMoreDecks(true);
         }, 1000);
         setCurrentQuestion(0);
+        for (let i = 0; i < data.products.length; i++) {
+          if (Cookies.get(`love-cards${i}`) === 'LOVCARDSDIG') {
+            handleSelectDeck('classic');
+            setShowCpfPopup(false);
+          } else if (Cookies.get(`love-cards${i}`) === 'LOVCARDSDIGQA') {
+            handleSelectDeck('question');
+            setShowCpfPopup(false);
+          }
+        }
       } else {
         const errorData = await response.json();
         alert(errorData.detail || 'Código inválido ou expirado.');
@@ -860,6 +872,9 @@ const App = () => {
 
   const handleSelectDeck = (deckType) => {
     setCurrentDeckType(deckType);
+    // Salva o tipo de deck selecionado em um cookie
+    Cookies.set('currentDeckType', deckType, { expires: 1 });
+    
     switch (deckType) {
       case "free":
         setCurrentDeck(shuffle(deckFree));

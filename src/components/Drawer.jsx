@@ -35,6 +35,18 @@ const Drawer = ({isVerified, handleShowCpfPopup, handleLogout}) => {
               </Link>
             </li>
             <li>
+            <li>
+              <br />
+              <p className="other-products">Adquirir Jogos</p>  
+            </li>
+            </li>
+            <li>
+            <a href="https://seguro.lovechocolate.com.br/r/BAUKPJCJU1" target="_blank" rel="noopener noreferrer">Love Cards Clássico</a>
+            </li>
+            <li>
+            <a href="https://seguro.lovechocolate.com.br/r/KFLKZZ0F1P" target="_blank" rel="noopener noreferrer">Love Cards Question</a>
+            </li>
+            <li>
               <br />
               <p className="other-products">Outros Produtos</p>
             </li>
