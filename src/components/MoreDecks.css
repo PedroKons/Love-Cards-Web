@@ -41,7 +41,7 @@
     color: #6b7280;
     margin: 0;
   }
-  
+
   /* Template options */
   .template-options {
     display: flex;
@@ -158,13 +158,14 @@
   .disabled {
     pointer-events: none;
     user-select: none;
-    opacity: 0.6;
 }
 
 .template-buy {
   color: #dd1d1d;
   text-decoration: underline;
   font-weight: bold;
+  font-size: 14px;
+  text-align: center;
 }
   
 
